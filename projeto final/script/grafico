@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script type = 'text / javascript' src = 'https: //www.gstatic.com/charts/loader.js' > </script>       
+    <tipo de script = 'text / javascript'>    
+     google.charts.load ('atual', {
+       'packages': ['geochart'],
+       // Nota: você precisará obter um mapsApiKey para o seu projeto.
+       // Consulte: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+       'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+     });
+     google.charts.setOnLoadCallback (drawMarkersMap);
+
+      função drawMarkersMap () {
+      var data = google.visualization.arrayToDataTable ([
+        ['Cidade', 'População', 'Área'],
+        ['Amazonas', 2761477, 1285.31],
+        ['Milão', 1324110, 181,76],
+        ['Nápoles', 959574, 117,27],
+        ['Turim', 907563, 130,17],
+        ['Palermo', 655875, 158,9],
+        ['Gênova', 607906, 243,60],
+        ['Bolonha', 380181, 140,7],
+        ['Florence', 371282, 102,41],
+        ['Fiumicino', 67370, 213,44],
+        ['Anzio', 52192, 43,43],
+        ['Ciampino', 38262, 11]
+      ]);
+
+      var options = {
+        região: «IT»,
+        displayMode: 'marcadores',
+        colorAxis: {colors: ['green', 'blue']}
+      };
+
+      var chart = novo google.visualization.GeoChart (document.getElementById ('chart_div'));
+      chart.draw (dados, opções);
+    };
+    </script>
+  </head>
+  <body>
+    <div id = "chart_div" style = " width : 900px ; height : 500px ; " > </div>     
+  </body>
+</html>
